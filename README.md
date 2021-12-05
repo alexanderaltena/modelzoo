@@ -1,4 +1,4 @@
-# modelzoo
+# MobileNet Setup
 
 Basic setup
 
