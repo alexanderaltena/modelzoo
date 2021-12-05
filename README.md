@@ -39,7 +39,7 @@ python --version
 ```
 
 step 6: Install TF
-Open an Internet browser on your Pi and head to tensorflow.org/lite/guide/python. Scroll down to the list of wheel (.whl) files and find the group that matches your OS/processor, which should be “Linux (ARM 32).” In that group, find the link that corresponds to your version of Python (3.7 for me). Right-click and select 
+Open an Internet browser on your Pi and head to https://github.com/google-coral/pycoral/releases/. Scroll down to the list of wheel (.whl) files and find the group that matches your OS/processor, which should be “Linux (ARM 32).” In that group, find the link that corresponds to your version of Python (3.7 for me). Right-click and select 
 Back in the terminal, enter the following:
 ```
 python -m pip install <paste in .whl link>
