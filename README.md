@@ -47,6 +47,8 @@ python -m pip install <paste in .whl link>
 ```
 
 Step 7: Run the webcam object detection script
+```
+python detect.py --model 'path/to/model' --labels 'path/to/labels'
 
 
 * Based on:
