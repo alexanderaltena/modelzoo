@@ -1,0 +1,1911 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="images" output_port_id="images" />
+		<IR name="images" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__325" output_port_id="Conv__325:0" />
+		<IR name="Conv__325" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.max_pool2d/MaxPool2d" output_port_id="StatefulPartitionedCall/model/tf.nn.max_pool2d/MaxPool2d:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.max_pool2d/MaxPool2d" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__590" output_port_id="const_fold_opt__590" />
+		<IR name="const_fold_opt__590" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__328" output_port_id="Conv__328:0" />
+		<IR name="Conv__328" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_1/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_1/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_1/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__329" output_port_id="Conv__329:0" />
+		<IR name="Conv__329" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_1/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_1/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_1/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_2/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_2/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_2/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__334" output_port_id="Conv__334:0" />
+		<IR name="Conv__334" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_2/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_2/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_2/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__552" output_port_id="const_fold_opt__552" />
+		<IR name="const_fold_opt__552" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__335" output_port_id="Conv__335:0" />
+		<IR name="Conv__335" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_3/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_3/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_3/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__336" output_port_id="Conv__336:0" />
+		<IR name="Conv__336" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_3/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_3/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_3/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat/concat" output_port_id="StatefulPartitionedCall/model/tf.concat/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__333" output_port_id="Transpose__333:0" />
+		<IR name="Transpose__333" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54325881" output_port_id="const_fold_opt__543" />
+		<IR name="const_fold_opt__54325881" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_1/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_1/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_1/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__55525542" output_port_id="const_fold_opt__555" />
+		<IR name="const_fold_opt__55525542" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_1/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_1/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_1/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__340" output_port_id="Transpose__340:0" />
+		<IR name="Transpose__340" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_4/Conv2D__43" output_port_id="StatefulPartitionedCall/model/conv2d_4/Conv2D__43:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_4/Conv2D__43" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_4/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_4/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_4/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__337" output_port_id="Conv__337:0" />
+		<IR name="Conv__337" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_4/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_4/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_4/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__591" output_port_id="const_fold_opt__591" />
+		<IR name="const_fold_opt__591" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__338" output_port_id="Conv__338:0" />
+		<IR name="Conv__338" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_5/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_5/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_5/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__339" output_port_id="Conv__339:0" />
+		<IR name="Conv__339" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_5/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_5/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_5/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_1/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_1/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_1/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__343" output_port_id="Transpose__343:0" />
+		<IR name="Transpose__343" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__543" output_port_id="const_fold_opt__543" />
+		<IR name="const_fold_opt__543" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_2/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_2/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_2/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_2/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_2/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_2/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__55525608" output_port_id="const_fold_opt__555" />
+		<IR name="const_fold_opt__55525608" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_3/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_3/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_3/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_1/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_1/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_1/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_1/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_1/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_1/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__347" output_port_id="Transpose__347:0" />
+		<IR name="Transpose__347" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_6/Conv2D__55" output_port_id="StatefulPartitionedCall/model/conv2d_6/Conv2D__55:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_6/Conv2D__55" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_6/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_6/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_6/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__344" output_port_id="Conv__344:0" />
+		<IR name="Conv__344" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_6/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_6/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_6/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__589" output_port_id="const_fold_opt__589" />
+		<IR name="const_fold_opt__589" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__345" output_port_id="Conv__345:0" />
+		<IR name="Conv__345" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_7/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_7/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_7/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__346" output_port_id="Conv__346:0" />
+		<IR name="Conv__346" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_7/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_7/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_7/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_2/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_2/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_2/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__350" output_port_id="Transpose__350:0" />
+		<IR name="Transpose__350" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54326142" output_port_id="const_fold_opt__543" />
+		<IR name="const_fold_opt__54326142" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_4/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_4/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_4/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_3/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_3/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_3/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__55525587" output_port_id="const_fold_opt__555" />
+		<IR name="const_fold_opt__55525587" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_5/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_5/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_5/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_2/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_2/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_2/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_2/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_2/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_2/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__354" output_port_id="Transpose__354:0" />
+		<IR name="Transpose__354" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_8/Conv2D__67" output_port_id="StatefulPartitionedCall/model/conv2d_8/Conv2D__67:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_8/Conv2D__67" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_8/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_8/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_8/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__351" output_port_id="Conv__351:0" />
+		<IR name="Conv__351" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_8/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_8/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_8/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__546" output_port_id="const_fold_opt__546" />
+		<IR name="const_fold_opt__546" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__352" output_port_id="Conv__352:0" />
+		<IR name="Conv__352" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_9/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_9/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_9/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__353" output_port_id="Conv__353:0" />
+		<IR name="Conv__353" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_9/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_9/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_9/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_3/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_3/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_3/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__357" output_port_id="Transpose__357:0" />
+		<IR name="Transpose__357" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54325938" output_port_id="const_fold_opt__543" />
+		<IR name="const_fold_opt__54325938" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_6/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_6/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_6/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_4/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_4/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_4/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__555" output_port_id="const_fold_opt__555" />
+		<IR name="const_fold_opt__555" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_7/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_7/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_7/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/zero_padding2d_7/Pad" output_port_id="StatefulPartitionedCall/model/zero_padding2d_7/Pad:0" />
+		<IR name="StatefulPartitionedCall/model/zero_padding2d_7/Pad" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/depthwise_conv2d_5/depthwise__80" output_port_id="StatefulPartitionedCall/model/depthwise_conv2d_5/depthwise__80:0" />
+		<IR name="StatefulPartitionedCall/model/depthwise_conv2d_5/depthwise__80" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__544" output_port_id="const_fold_opt__544" />
+		<IR name="const_fold_opt__544" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__358" output_port_id="Conv__358:0" />
+		<IR name="Conv__358" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_10/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_10/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_10/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__359" output_port_id="Conv__359:0" />
+		<IR name="Conv__359" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_10/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_10/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_10/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_11/Conv2D__87" output_port_id="StatefulPartitionedCall/model/conv2d_11/Conv2D__87:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_11/Conv2D__87" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_11/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_11/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_11/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__364" output_port_id="Conv__364:0" />
+		<IR name="Conv__364" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_11/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_11/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_11/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__545" output_port_id="const_fold_opt__545" />
+		<IR name="const_fold_opt__545" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__365" output_port_id="Conv__365:0" />
+		<IR name="Conv__365" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_12/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_12/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_12/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__366" output_port_id="Conv__366:0" />
+		<IR name="Conv__366" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_12/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_12/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_12/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_4/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_4/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_4/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__363" output_port_id="Transpose__363:0" />
+		<IR name="Transpose__363" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54925785" output_port_id="const_fold_opt__549" />
+		<IR name="const_fold_opt__54925785" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_8/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_8/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_8/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_5/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_5/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_5/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57926049" output_port_id="const_fold_opt__579" />
+		<IR name="const_fold_opt__57926049" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_9/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_9/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_9/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_3/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_3/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_3/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_3/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_3/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_3/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__370" output_port_id="Transpose__370:0" />
+		<IR name="Transpose__370" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_13/Conv2D__99" output_port_id="StatefulPartitionedCall/model/conv2d_13/Conv2D__99:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_13/Conv2D__99" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_13/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_13/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_13/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__367" output_port_id="Conv__367:0" />
+		<IR name="Conv__367" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_13/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_13/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_13/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__558" output_port_id="const_fold_opt__558" />
+		<IR name="const_fold_opt__558" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__368" output_port_id="Conv__368:0" />
+		<IR name="Conv__368" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_14/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_14/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_14/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__369" output_port_id="Conv__369:0" />
+		<IR name="Conv__369" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_14/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_14/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_14/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_5/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_5/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_5/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__373" output_port_id="Transpose__373:0" />
+		<IR name="Transpose__373" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__549" output_port_id="const_fold_opt__549" />
+		<IR name="const_fold_opt__549" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_10/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_10/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_10/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_6/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_6/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_6/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57925623" output_port_id="const_fold_opt__579" />
+		<IR name="const_fold_opt__57925623" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_11/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_11/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_11/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_4/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_4/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_4/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_4/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_4/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_4/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__377" output_port_id="Transpose__377:0" />
+		<IR name="Transpose__377" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_15/Conv2D__111" output_port_id="StatefulPartitionedCall/model/conv2d_15/Conv2D__111:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_15/Conv2D__111" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_15/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_15/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_15/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__374" output_port_id="Conv__374:0" />
+		<IR name="Conv__374" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_15/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_15/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_15/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__559" output_port_id="const_fold_opt__559" />
+		<IR name="const_fold_opt__559" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__375" output_port_id="Conv__375:0" />
+		<IR name="Conv__375" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_16/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_16/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_16/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__376" output_port_id="Conv__376:0" />
+		<IR name="Conv__376" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_16/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_16/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_16/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_6/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_6/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_6/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__380" output_port_id="Transpose__380:0" />
+		<IR name="Transpose__380" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54925614" output_port_id="const_fold_opt__549" />
+		<IR name="const_fold_opt__54925614" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_12/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_12/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_12/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_7/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_7/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_7/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57925803" output_port_id="const_fold_opt__579" />
+		<IR name="const_fold_opt__57925803" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_13/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_13/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_13/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_5/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_5/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_5/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_5/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_5/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_5/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__384" output_port_id="Transpose__384:0" />
+		<IR name="Transpose__384" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_17/Conv2D__123" output_port_id="StatefulPartitionedCall/model/conv2d_17/Conv2D__123:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_17/Conv2D__123" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_17/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_17/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_17/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__381" output_port_id="Conv__381:0" />
+		<IR name="Conv__381" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_17/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_17/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_17/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__557" output_port_id="const_fold_opt__557" />
+		<IR name="const_fold_opt__557" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__382" output_port_id="Conv__382:0" />
+		<IR name="Conv__382" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_18/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_18/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_18/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__383" output_port_id="Conv__383:0" />
+		<IR name="Conv__383" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_18/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_18/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_18/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_7/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_7/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_7/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__387" output_port_id="Transpose__387:0" />
+		<IR name="Transpose__387" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54926133" output_port_id="const_fold_opt__549" />
+		<IR name="const_fold_opt__54926133" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_14/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_14/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_14/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_8/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_8/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_8/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57925536" output_port_id="const_fold_opt__579" />
+		<IR name="const_fold_opt__57925536" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_15/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_15/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_15/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_6/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_6/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_6/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_6/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_6/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_6/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__391" output_port_id="Transpose__391:0" />
+		<IR name="Transpose__391" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_19/Conv2D__135" output_port_id="StatefulPartitionedCall/model/conv2d_19/Conv2D__135:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_19/Conv2D__135" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_19/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_19/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_19/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__388" output_port_id="Conv__388:0" />
+		<IR name="Conv__388" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_19/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_19/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_19/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__561" output_port_id="const_fold_opt__561" />
+		<IR name="const_fold_opt__561" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__389" output_port_id="Conv__389:0" />
+		<IR name="Conv__389" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_20/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_20/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_20/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__390" output_port_id="Conv__390:0" />
+		<IR name="Conv__390" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_20/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_20/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_20/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_8/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_8/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_8/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__394" output_port_id="Transpose__394:0" />
+		<IR name="Transpose__394" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54925851" output_port_id="const_fold_opt__549" />
+		<IR name="const_fold_opt__54925851" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_16/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_16/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_16/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_9/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_9/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_9/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57925575" output_port_id="const_fold_opt__579" />
+		<IR name="const_fold_opt__57925575" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_17/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_17/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_17/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_7/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_7/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_7/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_7/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_7/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_7/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__398" output_port_id="Transpose__398:0" />
+		<IR name="Transpose__398" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_21/Conv2D__147" output_port_id="StatefulPartitionedCall/model/conv2d_21/Conv2D__147:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_21/Conv2D__147" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_21/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_21/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_21/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__395" output_port_id="Conv__395:0" />
+		<IR name="Conv__395" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_21/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_21/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_21/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__581" output_port_id="const_fold_opt__581" />
+		<IR name="const_fold_opt__581" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__396" output_port_id="Conv__396:0" />
+		<IR name="Conv__396" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_22/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_22/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_22/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__397" output_port_id="Conv__397:0" />
+		<IR name="Conv__397" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_22/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_22/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_22/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_9/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_9/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_9/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__401" output_port_id="Transpose__401:0" />
+		<IR name="Transpose__401" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54925578" output_port_id="const_fold_opt__549" />
+		<IR name="const_fold_opt__54925578" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_18/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_18/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_18/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_10/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_10/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_10/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__579" output_port_id="const_fold_opt__579" />
+		<IR name="const_fold_opt__579" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_19/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_19/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_19/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_8/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_8/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_8/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_8/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_8/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_8/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__405" output_port_id="Transpose__405:0" />
+		<IR name="Transpose__405" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_23/Conv2D__159" output_port_id="StatefulPartitionedCall/model/conv2d_23/Conv2D__159:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_23/Conv2D__159" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_23/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_23/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_23/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__402" output_port_id="Conv__402:0" />
+		<IR name="Conv__402" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_23/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_23/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_23/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__576" output_port_id="const_fold_opt__576" />
+		<IR name="const_fold_opt__576" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__403" output_port_id="Conv__403:0" />
+		<IR name="Conv__403" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_24/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_24/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_24/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__404" output_port_id="Conv__404:0" />
+		<IR name="Conv__404" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_24/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_24/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_24/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_10/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_10/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_10/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__408" output_port_id="Transpose__408:0" />
+		<IR name="Transpose__408" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54925638" output_port_id="const_fold_opt__549" />
+		<IR name="const_fold_opt__54925638" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_20/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_20/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_20/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_11/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_11/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_11/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57926067" output_port_id="const_fold_opt__579" />
+		<IR name="const_fold_opt__57926067" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_21/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_21/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_21/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_9/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_9/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_9/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_9/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_9/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_9/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__412" output_port_id="Transpose__412:0" />
+		<IR name="Transpose__412" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_25/Conv2D__171" output_port_id="StatefulPartitionedCall/model/conv2d_25/Conv2D__171:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_25/Conv2D__171" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_25/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_25/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_25/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__409" output_port_id="Conv__409:0" />
+		<IR name="Conv__409" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_25/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_25/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_25/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__597" output_port_id="const_fold_opt__597" />
+		<IR name="const_fold_opt__597" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__410" output_port_id="Conv__410:0" />
+		<IR name="Conv__410" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_26/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_26/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_26/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__411" output_port_id="Conv__411:0" />
+		<IR name="Conv__411" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_26/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_26/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_26/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_11/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_11/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_11/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__415" output_port_id="Transpose__415:0" />
+		<IR name="Transpose__415" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__54926022" output_port_id="const_fold_opt__549" />
+		<IR name="const_fold_opt__54926022" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_22/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_22/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_22/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_12/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_12/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_12/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57925821" output_port_id="const_fold_opt__579" />
+		<IR name="const_fold_opt__57925821" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_23/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_23/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_23/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/zero_padding2d_16/Pad" output_port_id="StatefulPartitionedCall/model/zero_padding2d_16/Pad:0" />
+		<IR name="StatefulPartitionedCall/model/zero_padding2d_16/Pad" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/depthwise_conv2d_14/depthwise__184" output_port_id="StatefulPartitionedCall/model/depthwise_conv2d_14/depthwise__184:0" />
+		<IR name="StatefulPartitionedCall/model/depthwise_conv2d_14/depthwise__184" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__599" output_port_id="const_fold_opt__599" />
+		<IR name="const_fold_opt__599" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__416" output_port_id="Conv__416:0" />
+		<IR name="Conv__416" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_27/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_27/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_27/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__417" output_port_id="Conv__417:0" />
+		<IR name="Conv__417" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_27/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_27/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_27/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_28/Conv2D__191" output_port_id="StatefulPartitionedCall/model/conv2d_28/Conv2D__191:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_28/Conv2D__191" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_28/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_28/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_28/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__422" output_port_id="Conv__422:0" />
+		<IR name="Conv__422" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_28/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_28/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_28/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__594" output_port_id="const_fold_opt__594" />
+		<IR name="const_fold_opt__594" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__423" output_port_id="Conv__423:0" />
+		<IR name="Conv__423" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_29/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_29/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_29/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__424" output_port_id="Conv__424:0" />
+		<IR name="Conv__424" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_29/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_29/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_29/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_12/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_12/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_12/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__421" output_port_id="Transpose__421:0" />
+		<IR name="Transpose__421" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57425761" output_port_id="const_fold_opt__574" />
+		<IR name="const_fold_opt__57425761" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_24/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_24/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_24/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_13/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_13/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_13/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__570" output_port_id="const_fold_opt__570" />
+		<IR name="const_fold_opt__570" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_25/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_25/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_25/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_10/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_10/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_10/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_10/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_10/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_10/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__428" output_port_id="Transpose__428:0" />
+		<IR name="Transpose__428" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_30/Conv2D__203" output_port_id="StatefulPartitionedCall/model/conv2d_30/Conv2D__203:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_30/Conv2D__203" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_30/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_30/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_30/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__425" output_port_id="Conv__425:0" />
+		<IR name="Conv__425" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_30/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_30/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_30/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__592" output_port_id="const_fold_opt__592" />
+		<IR name="const_fold_opt__592" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__426" output_port_id="Conv__426:0" />
+		<IR name="Conv__426" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_31/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_31/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_31/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__427" output_port_id="Conv__427:0" />
+		<IR name="Conv__427" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_31/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_31/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_31/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_13/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_13/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_13/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__431" output_port_id="Transpose__431:0" />
+		<IR name="Transpose__431" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57425362" output_port_id="const_fold_opt__574" />
+		<IR name="const_fold_opt__57425362" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_26/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_26/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_26/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_14/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_14/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_14/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57025476" output_port_id="const_fold_opt__570" />
+		<IR name="const_fold_opt__57025476" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_27/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_27/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_27/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_11/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_11/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_11/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_11/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_11/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_11/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__435" output_port_id="Transpose__435:0" />
+		<IR name="Transpose__435" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_32/Conv2D__215" output_port_id="StatefulPartitionedCall/model/conv2d_32/Conv2D__215:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_32/Conv2D__215" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_32/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_32/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_32/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__432" output_port_id="Conv__432:0" />
+		<IR name="Conv__432" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_32/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_32/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_32/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__588" output_port_id="const_fold_opt__588" />
+		<IR name="const_fold_opt__588" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__433" output_port_id="Conv__433:0" />
+		<IR name="Conv__433" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_33/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_33/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_33/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__434" output_port_id="Conv__434:0" />
+		<IR name="Conv__434" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_33/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_33/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_33/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_14/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_14/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_14/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__438" output_port_id="Transpose__438:0" />
+		<IR name="Transpose__438" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__574" output_port_id="const_fold_opt__574" />
+		<IR name="const_fold_opt__574" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_28/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_28/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_28/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_15/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_15/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_15/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57025974" output_port_id="const_fold_opt__570" />
+		<IR name="const_fold_opt__57025974" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_29/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_29/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_29/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_12/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_12/Split:0" />
+		<IR name="StatefulPartitionedCall/model/lambda_12/Split/Split" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/lambda_12/Split/Split" output_port_id="StatefulPartitionedCall/model/lambda_12/Split:1" />
+		<IR name="StatefulPartitionedCall/model/lambda_12/Split/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Transpose__442" output_port_id="Transpose__442:0" />
+		<IR name="Transpose__442" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_34/Conv2D__227" output_port_id="StatefulPartitionedCall/model/conv2d_34/Conv2D__227:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_34/Conv2D__227" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_34/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_34/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_34/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__439" output_port_id="Conv__439:0" />
+		<IR name="Conv__439" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_34/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_34/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_34/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__593" output_port_id="const_fold_opt__593" />
+		<IR name="const_fold_opt__593" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__440" output_port_id="Conv__440:0" />
+		<IR name="Conv__440" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_35/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_35/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_35/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__441" output_port_id="Conv__441:0" />
+		<IR name="Conv__441" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.relu_35/Relu" output_port_id="StatefulPartitionedCall/model/tf.nn.relu_35/Relu:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.relu_35/Relu" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_15/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_15/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_15/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose__445" output_port_id="Transpose__445:0" />
+		<IR name="Transpose__445" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57426097" output_port_id="const_fold_opt__574" />
+		<IR name="const_fold_opt__57426097" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_30/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_30/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_30/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_16/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_16/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_16/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__57025752" output_port_id="const_fold_opt__570" />
+		<IR name="const_fold_opt__57025752" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_31/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_31/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_31/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_36/Conv2D__239" output_port_id="StatefulPartitionedCall/model/conv2d_36/Conv2D__239:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_36/Conv2D__239" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_36/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_36/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_36/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__446" output_port_id="Conv__446:0" />
+		<IR name="Conv__446" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Resize__250" output_port_id="Resize__250:0" />
+		<IR name="Resize__250" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_16/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_16/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_16/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_37/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_37/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_37/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__454" output_port_id="Conv__454:0" />
+		<IR name="Conv__454" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_1/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_1/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_1/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_38/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_38/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_38/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__457" output_port_id="Conv__457:0" />
+		<IR name="Conv__457" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_2/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_2/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_2/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_39/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_39/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_39/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__460" output_port_id="Conv__460:0" />
+		<IR name="Conv__460" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_3/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_3/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_3/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_40/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_40/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_40/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__451" output_port_id="Conv__451:0" />
+		<IR name="Conv__451" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_4/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_4/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_4/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_17/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_17/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_17/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_41/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_41/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_41/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__463" output_port_id="Conv__463:0" />
+		<IR name="Conv__463" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_5/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_5/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_5/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_42/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_42/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_42/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__466" output_port_id="Conv__466:0" />
+		<IR name="Conv__466" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_6/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_6/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_6/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Resize__270" output_port_id="Resize__270:0" />
+		<IR name="Resize__270" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_18/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_18/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_18/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_43/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_43/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_43/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__474" output_port_id="Conv__474:0" />
+		<IR name="Conv__474" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_7/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_7/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_7/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_44/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_44/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_44/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__477" output_port_id="Conv__477:0" />
+		<IR name="Conv__477" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_8/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_8/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_8/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_45/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_45/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_45/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__480" output_port_id="Conv__480:0" />
+		<IR name="Conv__480" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_9/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_9/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_9/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_46/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_46/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_46/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__471" output_port_id="Conv__471:0" />
+		<IR name="Conv__471" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_10/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_10/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_10/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_19/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_19/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_19/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_47/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_47/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_47/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__483" output_port_id="Conv__483:0" />
+		<IR name="Conv__483" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_11/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_11/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_11/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_48/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_48/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_48/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__489" output_port_id="Conv__489:0" />
+		<IR name="Conv__489" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_48/Conv2D__316" output_port_id="StatefulPartitionedCall/model/conv2d_48/Conv2D__316:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_48/Conv2D__316" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__596" output_port_id="const_fold_opt__596" />
+		<IR name="const_fold_opt__596" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_32/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_32/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_32/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.sigmoid/Sigmoid" output_port_id="StatefulPartitionedCall/model/tf.math.sigmoid/Sigmoid:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.sigmoid/Sigmoid" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_17/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_17/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_17/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.slice/Slice/Split" output_port_id="StatefulPartitionedCall/model/tf.slice/Slice:0" />
+		<IR name="StatefulPartitionedCall/model/tf.slice/Slice/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.slice/Slice/Split" output_port_id="StatefulPartitionedCall/model/tf.slice_1/Slice:0" />
+		<IR name="StatefulPartitionedCall/model/tf.slice/Slice/Split" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.slice/Slice/Split" output_port_id="StatefulPartitionedCall/model/tf.slice_2/Slice:0" />
+		<IR name="StatefulPartitionedCall/model/tf.slice/Slice/Split" output_port_id="5" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.add_68/Add:0" output_port_id="StatefulPartitionedCall/model/tf.math.add_68/Add:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.add_68/Add:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.add_69/Add" output_port_id="StatefulPartitionedCall/model/tf.math.add_69/Add:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.add_69/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_1/Mul/y:0" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_1/Mul/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_1/Mul/y:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_1/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_1/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_1/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:026073" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:026073" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_2/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_2/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_2/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:026019" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:026019" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_3/Mul/y:0" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_3/Mul/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_3/Mul/y:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_3/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_3/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_3/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_20/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_20/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_20/concat" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__56525866" output_port_id="const_fold_opt__565" />
+		<IR name="const_fold_opt__56525866" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_33/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_33/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_33/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_49/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_49/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_49/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__486" output_port_id="Conv__486:0" />
+		<IR name="Conv__486" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_12/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_12/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_12/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_21/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_21/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_21/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_50/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_50/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_50/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__493" output_port_id="Conv__493:0" />
+		<IR name="Conv__493" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_13/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_13/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_13/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_51/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_51/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_51/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__496" output_port_id="Conv__496:0" />
+		<IR name="Conv__496" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_14/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_14/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_14/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_52/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_52/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_52/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__499" output_port_id="Conv__499:0" />
+		<IR name="Conv__499" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_15/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_15/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_15/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_53/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_53/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_53/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__490" output_port_id="Conv__490:0" />
+		<IR name="Conv__490" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_16/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_16/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_16/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_22/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_22/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_22/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_54/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_54/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_54/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__502" output_port_id="Conv__502:0" />
+		<IR name="Conv__502" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_17/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_17/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_17/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_55/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_55/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_55/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__524" output_port_id="Conv__524:0" />
+		<IR name="Conv__524" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_55/Conv2D__306" output_port_id="StatefulPartitionedCall/model/conv2d_55/Conv2D__306:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_55/Conv2D__306" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__567" output_port_id="const_fold_opt__567" />
+		<IR name="const_fold_opt__567" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_34/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_34/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_34/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.sigmoid_1/Sigmoid" output_port_id="StatefulPartitionedCall/model/tf.math.sigmoid_1/Sigmoid:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.sigmoid_1/Sigmoid" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_18/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_18/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_18/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.slice_3/Slice/Split" output_port_id="StatefulPartitionedCall/model/tf.slice_3/Slice:0" />
+		<IR name="StatefulPartitionedCall/model/tf.slice_3/Slice/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.slice_3/Slice/Split" output_port_id="StatefulPartitionedCall/model/tf.slice_4/Slice:0" />
+		<IR name="StatefulPartitionedCall/model/tf.slice_3/Slice/Split" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.slice_3/Slice/Split" output_port_id="StatefulPartitionedCall/model/tf.slice_5/Slice:0" />
+		<IR name="StatefulPartitionedCall/model/tf.slice_3/Slice/Split" output_port_id="5" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:026148" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:026148" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_4/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_4/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_4/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.add_77/Add:0" output_port_id="StatefulPartitionedCall/model/tf.math.add_77/Add:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.add_77/Add:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.add_78/Add" output_port_id="StatefulPartitionedCall/model/tf.math.add_78/Add:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.add_78/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_5/Mul/y:0" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_5/Mul/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_5/Mul/y:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_5/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_5/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_5/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:025521" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:025521" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_6/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_6/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_6/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:025992" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:025992" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow_1/Pow" output_port_id="StatefulPartitionedCall/model/tf.math.pow_1/Pow:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow_1/Pow" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_7/Mul/y:0" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_7/Mul/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_7/Mul/y:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_7/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_7/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_7/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_23/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_23/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_23/concat" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__565" output_port_id="const_fold_opt__565" />
+		<IR name="const_fold_opt__565" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_35/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_35/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_35/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_56/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_56/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_56/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__505" output_port_id="Conv__505:0" />
+		<IR name="Conv__505" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_18/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_18/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_18/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_24/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_24/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_24/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_57/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_57/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_57/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__511" output_port_id="Conv__511:0" />
+		<IR name="Conv__511" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_19/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_19/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_19/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_58/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_58/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_58/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__514" output_port_id="Conv__514:0" />
+		<IR name="Conv__514" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_20/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_20/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_20/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_59/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_59/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_59/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__517" output_port_id="Conv__517:0" />
+		<IR name="Conv__517" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_21/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_21/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_21/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_60/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_60/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_60/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__508" output_port_id="Conv__508:0" />
+		<IR name="Conv__508" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_22/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_22/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_22/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_25/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_25/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_25/concat" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_61/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_61/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_61/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__520" output_port_id="Conv__520:0" />
+		<IR name="Conv__520" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.nn.silu_23/mul" output_port_id="StatefulPartitionedCall/model/tf.nn.silu_23/mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.nn.silu_23/mul" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_62/Conv2D/ReadVariableOp:0" output_port_id="StatefulPartitionedCall/model/conv2d_62/Conv2D/ReadVariableOp:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_62/Conv2D/ReadVariableOp:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv__523" output_port_id="Conv__523:0" />
+		<IR name="Conv__523" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/conv2d_62/Conv2D__296" output_port_id="StatefulPartitionedCall/model/conv2d_62/Conv2D__296:0" />
+		<IR name="StatefulPartitionedCall/model/conv2d_62/Conv2D__296" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__566" output_port_id="const_fold_opt__566" />
+		<IR name="const_fold_opt__566" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_36/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_36/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_36/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.sigmoid_2/Sigmoid" output_port_id="StatefulPartitionedCall/model/tf.math.sigmoid_2/Sigmoid:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.sigmoid_2/Sigmoid" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.compat.v1.transpose_19/transpose" output_port_id="StatefulPartitionedCall/model/tf.compat.v1.transpose_19/transpose:0" />
+		<IR name="StatefulPartitionedCall/model/tf.compat.v1.transpose_19/transpose" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.slice_6/Slice/Split" output_port_id="StatefulPartitionedCall/model/tf.slice_6/Slice:0" />
+		<IR name="StatefulPartitionedCall/model/tf.slice_6/Slice/Split" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.slice_6/Slice/Split" output_port_id="StatefulPartitionedCall/model/tf.slice_7/Slice:0" />
+		<IR name="StatefulPartitionedCall/model/tf.slice_6/Slice/Split" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.slice_6/Slice/Split" output_port_id="StatefulPartitionedCall/model/tf.slice_8/Slice:0" />
+		<IR name="StatefulPartitionedCall/model/tf.slice_6/Slice/Split" output_port_id="5" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:025332" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:025332" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_8/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_8/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_8/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.add_86/Add:0" output_port_id="StatefulPartitionedCall/model/tf.math.add_86/Add:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.add_86/Add:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.add_87/Add" output_port_id="StatefulPartitionedCall/model/tf.math.add_87/Add:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.add_87/Add" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_9/Mul/y:0" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_9/Mul/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_9/Mul/y:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_9/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_9/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_9/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:026052" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:026052" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_10/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_10/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_10/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:025488" output_port_id="StatefulPartitionedCall/model/tf.math.pow/Pow/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow/Pow/y:025488" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.pow_2/Pow" output_port_id="StatefulPartitionedCall/model/tf.math.pow_2/Pow:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.pow_2/Pow" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_11/Mul/y:0" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_11/Mul/y:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_11/Mul/y:0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.math.multiply_11/Mul" output_port_id="StatefulPartitionedCall/model/tf.math.multiply_11/Mul:0" />
+		<IR name="StatefulPartitionedCall/model/tf.math.multiply_11/Mul" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.concat_26/concat" output_port_id="StatefulPartitionedCall/model/tf.concat_26/concat:0" />
+		<IR name="StatefulPartitionedCall/model/tf.concat_26/concat" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="const_fold_opt__56525710" output_port_id="const_fold_opt__565" />
+		<IR name="const_fold_opt__56525710" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="StatefulPartitionedCall/model/tf.reshape_37/Reshape" output_port_id="StatefulPartitionedCall/model/tf.reshape_37/Reshape:0" />
+		<IR name="StatefulPartitionedCall/model/tf.reshape_37/Reshape" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="tf.identity" output_port_id="tf.identity" />
+		<IR name="tf.identity" output_port_id="3" />
+	</map>
+</mapping>
