@@ -49,7 +49,7 @@ python -m pip install <paste in .whl link>
 Step 7: Run the webcam object detection script
 ```
 python detect.py --model 'path/to/model' --labels 'path/to/labels'
-
+```
 
 * Based on:
 https://www.digikey.com/en/maker/projects/how-to-perform-object-detection-with-tensorflow-lite-on-raspberry-pi/b929e1519c7c43d5b2c6f89984883588
