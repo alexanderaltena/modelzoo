@@ -26,10 +26,9 @@ Step 4:
 sudo apt -y install qt4-dev-tools libatlas-base-dev libhdf5-103 
 ```
 
-Step 5: install openCV
+Step 5: install openCV (if you have issues try opencv-contrib-python==4.1.0.25 || opencv-python==3.4.11.41 )
 ```
 python -m pip install opencv-contrib-python 
-(if you have issues try version 4.1.0.25 ) -> opencv-contrib-python==4.1.0.25
 ```
 
 Step 6:
