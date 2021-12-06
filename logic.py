@@ -136,7 +136,7 @@ input_mean = 127.5
 input_std = 127.5
 
 # Set the logic for visa
-detector_item_name = "remote"
+detector_item_name = "person"
 detect_item_name = "bottle"
 detect_item_position = []
 
@@ -183,7 +183,7 @@ while True:
     # Loop over all detections and draw detection box if confidence is above minimum threshold
     # For now
     for i in range(len(scores)):
-        if ((scores[i] > min_conf_threshold) and (scores[i] <= 1.0) and (labels[int(classes[i])] == "remote" or labels[int(classes[i])] == detect_item_name )):
+        if ((scores[i] > min_conf_threshold) and (scores[i] <= 1.0) and (labels[int(classes[i])] == detector_item_name or labels[int(classes[i])] == detect_item_name )):
 
             # Get bounding box coordinates and draw box
             # Interpreter can return coordinates that are outside of image dimensions, need to force them to be within image using max() and min()
@@ -218,7 +218,7 @@ while True:
                 # detect_item_position.insert(5, ycenter)
                 
             # Guide the "item" to the correct position    
-            elif (object_name == "remote" and detect_item_position):
+            elif (object_name == detector_item_name and detect_item_position):
                 
                 # Add the logic for forward here should probably do once the circle is in a box go forward
                 # So create a box within a box -> cache this box
