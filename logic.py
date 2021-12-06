@@ -135,7 +135,6 @@ floating_model = (input_details[0]['dtype'] == np.float32)
 input_mean = 127.5
 input_std = 127.5
 
-# Set the logic for visa
 detector_item_name = "person"
 detect_item_name = "bottle"
 detect_item_position = []
@@ -153,7 +152,7 @@ cv2.namedWindow('Object detector', cv2.WINDOW_NORMAL)
 
 #for frame1 in camera.capture_continuous(rawCapture, format="bgr",use_video_port=True):
 while True:
-    
+
     # Start timer (for calculating frame rate)
     t1 = cv2.getTickCount()
 
@@ -181,7 +180,6 @@ while True:
     #num = interpreter.get_tensor(output_details[3]['index'])[0]  # Total number of detected objects (inaccurate and not needed)
 
     # Loop over all detections and draw detection box if confidence is above minimum threshold
-    # For now
     for i in range(len(scores)):
         if ((scores[i] > min_conf_threshold) and (scores[i] <= 1.0) and (labels[int(classes[i])] == detector_item_name or labels[int(classes[i])] == detect_item_name )):
 
@@ -198,16 +196,16 @@ while True:
             object_name = labels[int(classes[i])] # Look up object name from "labels" array using class index
             label = '%s: %d%%' % (object_name, int(scores[i]*100)) # Example: 'person: 72%'
             labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) # Get font size
-            label_ymin = max(ymin, labelSize[1]   10) # Make sure not to draw label too close to top of window
-            cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin labelSize[0], label_ymin baseLine-10), (255, 255, 255), cv2.FILLED) # Draw white box to put label text in
+            label_ymin = max(ymin, labelSize[1] + 10) # Make sure not to draw label too close to top of window
+            cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Draw white box to put label text in
             cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # Draw label text
 
             # Draw circle in center
-            xcenter = xmin   (int(round((xmax - xmin) / 2)))
-            ycenter = ymin   (int(round((ymax - ymin) / 2)))
+            xcenter = xmin + (int(round((xmax - xmin) / 2)))
+            ycenter = ymin + (int(round((ymax - ymin) / 2)))
             cv2.circle(frame, (xcenter, ycenter), 5, (0,0,255), thickness=-1)
             
-            # Cache the item position to send out events where to move
+             # Cache the item position to send out events where to move
             if (object_name == detect_item_name):
                 # Cache the item 
                 detect_item_position.insert(0, xcenter)
@@ -236,7 +234,7 @@ while True:
                 elif (ycenter > detect_item_position[1]):
                     print('go down')
             # Print info
-            
+            # print('Object ' + str(i) + ': ' + object_name + ' at (' + str(xcenter) + ', ' + str(ycenter) + ')')
 
     # Draw framerate in corner of frame
     cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(30,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2,cv2.LINE_AA)
