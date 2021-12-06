@@ -21,7 +21,7 @@ Step 3: (make sure you are in a venv) Install libraries for imageprocessing
 ```
 sudo apt -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev
 ```
-Step 4: 
+Step 4: GUI functionallity
 ```
 sudo apt -y install qt4-dev-tools libatlas-base-dev libhdf5-103 
 ```
@@ -31,9 +31,8 @@ Step 5: install openCV (if you have issues try opencv-contrib-python==4.1.0.25 |
 python -m pip install opencv-contrib-python 
 ```
 
-Step 6:
+Step 6: Check out your processor and python version:
 ```
-Check out your processor and python version:
 uname -m
 python --version
 ```
