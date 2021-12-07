@@ -1,3 +1,24 @@
+######## Webcam Object Detection Using Tensorflow-trained Classifier #########
+#
+# Author: Evan Juras
+# Date: 10/27/19
+# Description: 
+# This program uses a TensorFlow Lite model to perform object detection on a live webcam
+# feed. It draws boxes and scores around the objects of interest in each frame from the
+# webcam. To improve FPS, the webcam object runs in a separate thread from the main program.
+# This script will work with either a Picamera or regular USB webcam.
+#
+# This code is based off the TensorFlow Lite image classification example at:
+# https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/examples/python/label_image.py
+#
+# I added my own method of drawing boxes and labels using OpenCV.
+# 
+# Modified by: Shawn Hymel
+# Date: 09/22/20
+# Description:
+# Added ability to resize cv2 window and added center dot coordinates of each detected object.
+# Objects and center coordinates are printed to console.
+
 # Import packages
 import os
 import argparse
@@ -192,17 +213,17 @@ while True:
             object_name = labels[int(classes[i])] # Look up object name from "labels" array using class index
             label = '%s: %d%%' % (object_name, int(scores[i]*100)) # Example: 'person: 72%'
             labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) # Get font size
-            label_ymin = max(ymin, labelSize[1]   10) # Make sure not to draw label too close to top of window
-            cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin labelSize[0], label_ymin baseLine-10), (255, 255, 255), cv2.FILLED) # Draw white box to put label text in
+            label_ymin = max(ymin, labelSize[1] + 10) # Make sure not to draw label too close to top of window
+            cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Draw white box to put label text in
             cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # Draw label text
 
             # Draw circle in center
-            xcenter = xmin   (int(round((xmax - xmin) / 2)))
-            ycenter = ymin   (int(round((ymax - ymin) / 2)))
+            xcenter = xmin + (int(round((xmax - xmin) / 2)))
+            ycenter = ymin + (int(round((ymax - ymin) / 2)))
             cv2.circle(frame, (xcenter, ycenter), 5, (0,0,255), thickness=-1)
 
             # Print info
-            print('Object '   str(i)   ': '   object_name   ' at ('   str(xcenter)   ', '   str(ycenter)   ')')
+            print('Object ' + str(i) + ': ' + object_name + ' at (' + str(xcenter) + ', ' + str(ycenter) + ')')
 
     # Draw framerate in corner of frame
     cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(30,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2,cv2.LINE_AA)
