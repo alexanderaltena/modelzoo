@@ -46,7 +46,7 @@ python -m pip install <paste in .whl link>
 
 Step 7: Run the webcam object detection script
 ```
-python detect.py --modeldir 'path/to/model'
+python detect.py --modeldir '{path}/mobilenet'
 ```
 
 * Based on:
