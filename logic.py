@@ -208,13 +208,10 @@ while True:
              # Cache the item position to send out events where to move
             if (object_name == detect_item_name):
                 # Cache the item 
-                detect_item_position.insert(0, xcenter)
-                detect_item_position.insert(1, ycenter)
-                # detect_item_position.insert(2, xmin)
-                # detect_item_position.insert(3, xmax)
-                # detect_item_position.insert(4, xcenter)
-                # detect_item_position.insert(5, ycenter)
-                
+                detect_item_position.insert(0, xmin)
+                detect_item_position.insert(1, xmax)
+                detect_item_position.insert(2, ymin)
+                detect_item_position.insert(3, ymax)
             # Guide the "item" to the correct position    
             elif (object_name == detector_item_name and detect_item_position):
                 
@@ -222,17 +219,18 @@ while True:
                 # So create a box within a box -> cache this box
                 # When circle is anywhere in the box move forward
                 
-                # left right
-                if (xcenter > detect_item_position[0]):
-                    print('go left')
-                elif (xcenter < detect_item_position[0]):
-                    print('go right')
-                    
+                # If xmin[detect_item] < xcenter[detector_item] > xmax[detect_item]
+                # Go UP || DOWN
+                if (detect_item_position[0] < xcenter > detect_item_position[1]):
+                    if(detect_item_position[2] < xcenter or ymax < detect_item_position[3]):
+                        print('go up')
+                    else:
+                        print('go down')
                 # up down
-                elif (ycenter < detect_item_position[1]):
-                    print('go up')
-                elif (ycenter > detect_item_position[1]):
-                    print('go down')
+                elif (xcenter > detect_item_position[1]):
+                    print('go right')
+                else:
+                    print('go left')
             # Print info
             # print('Object ' + str(i) + ': ' + object_name + ' at (' + str(xcenter) + ', ' + str(ycenter) + ')')
 
