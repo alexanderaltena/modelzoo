@@ -137,6 +137,7 @@ input_std = 127.5
 
 detector_item_name = "person"
 detect_item_name = "bottle"
+
 detect_item_position = []
 
 # Initialize frame rate calculation
@@ -195,7 +196,6 @@ while True:
             # Draw label
             object_name = labels[int(classes[i])] # Look up object name from "labels" array using class index
             label = '%s: %d%%' % (object_name, int(scores[i]*100)) # Example: 'person: 72%'?
-        ,lpkoiyx `12`1
             labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) # Get font size
             label_ymin = max(ymin, labelSize[1] + 10) # Make sure not to draw label too close to top of window
             cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Draw white box to put label text in
@@ -215,14 +215,12 @@ while True:
                 detect_item_position.insert(3, ymax)
             # Guide the "item" to the correct position    
             elif (object_name == detector_item_name and detect_item_position):
-                
-                # Add the logic for forward here should probably do once the circle is in a box go forward
-                # So create a box within a box -> cache this box
-                # When circle is anywhere in the box move forward
-                
-                # If xmin[detect_item] < xcenter[detector_item] > xmax[detect_item]
+              
+                # Go Forward 
+                if (detect_item_position[0] < xmin and xmax > detect_item_position[1] and detect_item_position[2] > ymin and detect_item_position[3] < ymax):
+                    print('go forward')
                 # Go UP || DOWN
-                if (detect_item_position[0] < xcenter > detect_item_position[1]):
+                elif (detect_item_position[0] < xcenter > detect_item_position[1]):
                     if(detect_item_position[2] < xcenter or ymax < detect_item_position[3]):
                         print('go up')
                     else:
@@ -232,7 +230,7 @@ while True:
                     print('go left')
                 # GO RIGHT
                 elif(xcenter < detect_item_position[1]):
-                    print('go right')
+                    print('go RIGHT')
             # Print info
             # print('Object ' + str(i) + ': ' + object_name + ' at (' + str(xcenter) + ', ' + str(ycenter) + ')')
 
