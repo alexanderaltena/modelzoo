@@ -219,9 +219,8 @@ while True:
                 # Go Forward 
                 if (detect_item_position[0] < xmin and xmax > detect_item_position[1] and detect_item_position[2] > ymin and detect_item_position[3] < ymax):
                     print('go forward')
-                # If xmin[detect_item] < xcenter[detector_item] > xmax[detect_item]
                 # Go UP || DOWN
-                if (detect_item_position[0] < xcenter > detect_item_position[1]):
+                elif (detect_item_position[0] < xcenter > detect_item_position[1]):
                     if(detect_item_position[2] < xcenter or ymax < detect_item_position[3]):
                         print('go up')
                     else:
