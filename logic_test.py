@@ -1,4 +1,5 @@
 # Import packages
+import asyncio
 import os
 import argparse
 import cv2
@@ -22,11 +23,11 @@ class VideoStream:
         # Read first frame from the stream
         (self.grabbed, self.frame) = self.stream.read()
 
-	# Variable to control when the camera is stopped
+	    # Variable to control when the camera is stopped
         self.stopped = False
 
     def start(self):
-	# Start the thread that reads frames from the video stream
+	    # Start the thread that reads frames from the video stream
         Thread(target=self.update,args=()).start()
         return self
 
@@ -50,6 +51,34 @@ class VideoStream:
 	# Indicate that the camera and thread should be stopped
         self.stopped = True
 
+class BleConsumer:
+    def __init__(self):
+         os.system('bluetoothctl -- remove C0:CC:BB:AA:AA:AA')
+         device_ble_mac = os.getenv('DEVICE_BLE_MAC')
+         os.system('sudo rm "/var/lib/bluetooth/{}/cache/C0:CC:BB:AA:AA:AA"'.format(device_ble_mac))
+         self.que_haptic =  asyncio.Queue().maxsize(1)
+    
+    def run_haptic_feedback(self):
+         while True:
+            # Use await asyncio.wait_for(queue.get(), timeout=1.0) if you want a timeout for getting data.
+            data = self.queue_haptic.get()
+            print(f"{data}: haptic handler received!")
+            #if data is None:
+            #    print("Logic disconnecting! Exiting consumer loop...")
+            #    break
+            #else:
+                # disconnect distance streaming
+                #await global_client.write_gatt_char(DISTANCE_CHAR_UUID, 0, response=True)
+                #await asyncio.sleep(1.0) 
+                #await global_client.write_gatt_char(HAPTIC_CHAR_UUID, b'\x01', response=True)
+                #await asyncio.sleep(1.0)
+                # re-start distance streaming
+                #await global_client.write_gatt_char(DISTANCE_CHAR_UUID, 4, resp
+         
+    def put(self, feedback: int):
+        self.queue_haptic.put(feedback)
+       
+        
 # Define and parse input arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('--modeldir', help='Folder the .tflite file is located in',
@@ -144,6 +173,10 @@ detect_item_position = []
 frame_rate_calc = 1
 freq = cv2.getTickFrequency()
 
+bleconsumer = BleConsumer()
+bleconsumer.run_haptic_feedback()
+
+
 # Initialize video stream
 videostream = VideoStream(resolution=(imW,imH),framerate=30).start()
 time.sleep(1)
@@ -206,7 +239,7 @@ while True:
             ycenter = ymin + (int(round((ymax - ymin) / 2)))
             cv2.circle(frame, (xcenter, ycenter), 5, (0,0,255), thickness=-1)
             
-             # Cache the item position to send out events where to move
+            # Cache the item position to send out events where to move
             if (object_name == detect_item_name):
                 # Cache the item 
                 detect_item_position.insert(0, xmin)
@@ -215,22 +248,27 @@ while True:
                 detect_item_position.insert(3, ymax)
             # Guide the "item" to the correct position    
             elif (object_name == detector_item_name and detect_item_position):
-              
+                
                 # Go Forward 
-                if (detect_item_position[0] < xmin and xmax > detect_item_position[1] and detect_item_position[2] > ymin and detect_item_position[3] < ymax):
-                    print('go forward')
-                # Go UP || DOWN
-                elif (detect_item_position[0] < xcenter > detect_item_position[1]):
-                    if(detect_item_position[2] < xcenter or ymax < detect_item_position[3]):
-                        print('go up')
-                    else:
-                        print('go down')
-                # GO LEFT
+                if (xmin < detect_item_position[0] and xmax > detect_item_position[1] and ymin < detect_item_position[2] and ymax > detect_item_position[3]):
+                    print('Go Forward')
+                    bleconsumer.put(0)
+                # Go Right
+                elif (xcenter < detect_item_position[0]):
+                    print('Go Right')
+                    bleconsumer.put(4)
+                 # Go Left
                 elif (xcenter > detect_item_position[1]):
-                    print('go left')
-                # GO RIGHT
-                elif(xcenter < detect_item_position[1]):
-                    print('go RIGHT')
+                    print('Go Left')
+                    bleconsumer.put(2)
+                # Go Up     
+                elif (ycenter < detect_item_position[2]):
+                    print('Go down')
+                    bleconsumer.put(3)
+                # Go Down  
+                elif (ycenter > detect_item_position[3]):
+                    print('Go up')
+                    bleconsumer.put(5)
             # Print info
             # print('Object ' + str(i) + ': ' + object_name + ' at (' + str(xcenter) + ', ' + str(ycenter) + ')')
 
