@@ -5,11 +5,10 @@ import cv2
 import numpy as np
 import sys
 import time
-from threading import Thread
+import threading
 import importlib.util
 
 # BLE Client
-# sys.path.insert(0, '../ble_client/')
 from ble_client.STLB100_GATT_client import run_ble_client, run_haptic_feedback
 import sys
 import datetime
@@ -21,6 +20,7 @@ import asyncio
 class VideoStream:
     """Camera object that controls video streaming from the Picamera"""
     def __init__(self,resolution=(640,480),framerate=30):
+        print("video stream created")
         # Initialize the PiCamera and the camera image stream
         self.stream = cv2.VideoCapture(0)
         ret = self.stream.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
@@ -35,7 +35,8 @@ class VideoStream:
 
     def start(self):
 	# Start the thread that reads frames from the video stream
-        Thread(target=self.update,args=()).start()
+        #Thread(target=self.update,args=()).start()
+        self.update
         return self
 
     def update(self):
@@ -145,8 +146,10 @@ input_std = 127.5
 
 detector_item_name = "person"
 detect_item_name = "bottle"
-
 detect_item_position = []
+
+detect_item_direction = []
+
 
 freq = cv2.getTickFrequency()
 
@@ -154,24 +157,13 @@ freq = cv2.getTickFrequency()
 videostream = VideoStream(resolution=(imW,imH),framerate=30).start()
 time.sleep(1)
 
-queue_haptic = asyncio.Queue()
-
 # Create window
 cv2.namedWindow('Object detector', cv2.WINDOW_NORMAL)
     
-async def run_ble_producer(queue_haptic: asyncio.Queue):
-    print("setup ble consumer")
+def run_ble_consumer():
+    print('Create BLE Consumer')
     #for frame1 in camera.capture_continuous(rawCapture, format="bgr",use_video_port=True):
     while True:
-        # Use await asyncio.wait_for(queue.get(), timeout=1.0) if you want a timeout for getting data.
-#         epoch, data = await queue_dist.get()
-#         if data is None:
-#             print("BLE disconnecting! Exiting consumer loop...")
-#             break
-#         else:
-#             timestamp = datetime.datetime.fromtimestamp(epoch/1000.)
-#             print(f"{data}")
-
         # Initialize frame rate calculation
         frame_rate_calc = 1
         
@@ -200,7 +192,6 @@ async def run_ble_producer(queue_haptic: asyncio.Queue):
         classes = interpreter.get_tensor(output_details[1]['index'])[0] # Class index of detected objects
         scores = interpreter.get_tensor(output_details[2]['index'])[0] # Confidence of detected objects
         #num = interpreter.get_tensor(output_details[3]['index'])[0]  # Total number of detected objects (inaccurate and not needed)
-
         # Loop over all detections and draw detection box if confidence is above minimum threshold
         for i in range(len(scores)):
             if ((scores[i] > min_conf_threshold) and (scores[i] <= 1.0) and (labels[int(classes[i])] == detector_item_name or labels[int(classes[i])] == detect_item_name )):
@@ -241,40 +232,37 @@ async def run_ble_producer(queue_haptic: asyncio.Queue):
                     # Go Forward 
                     if (xmin < detect_item_position[0] and xmax > detect_item_position[1] and ymin < detect_item_position[2] and ymax > detect_item_position[3]):
                         print('Go Forward')
-                        await queue_haptic.put(0)
+                        #queue_haptic.put(0)
+                        detect_item_direction.append(0)
                     # Go Right
                     elif (xcenter < detect_item_position[0]):
                         print('Go Right')
-                        await queue_haptic.put(4)
+                        #queue_haptic.put(4)
+                        detect_item_direction.append(4)
                      # Go Left
                     elif (xcenter > detect_item_position[1]):
                         print('Go Left')
-                        await queue_haptic.put(2)
+                        #queue_haptic.put(2)
+                        detect_item_direction.append(2)
                     # Go Up     
                     elif (ycenter < detect_item_position[2]):
                         print('Go down')
-                        await queue_haptic.put(3)
+                        #queue_haptic.put(3)
+                        detect_item_direction.append(3)
                     # Go Down  
                     elif (ycenter > detect_item_position[3]):
                         print('Go up')
-                        await queue_haptic.put(5)
-#                     
-#                     data = await queue_haptic.get()
-#                     print(f"{data}: haptic handler received!")
+                        #queue_haptic.put(5)
+                        detect_item_direction.append(5)
                 # Print info
                 # print('Object ' + str(i) + ': ' + object_name + ' at (' + str(xcenter) + ', ' + str(ycenter) + ')')
-
-        # Draw framerate in corner of frame
-        cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(30,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2,cv2.LINE_AA)
-
+                
         # All the results have been drawn on the frame, so it's time to display it.
         cv2.imshow('Object detector', frame)
-
         # Calculate framerate
         t2 = cv2.getTickCount()
         time1 = (t2-t1)/freq
         frame_rate_calc= 1/time1
-
         # Press 'q' to quit
         if cv2.waitKey(1) == ord('q'):
             break
@@ -282,16 +270,42 @@ async def run_ble_producer(queue_haptic: asyncio.Queue):
     # Clean up
     cv2.destroyAllWindows()
     videostream.stop()
-        
-async def main():
+    
+def send_feedback(loop):
+    return asyncio.run_coroutine_threadsafe(run_haptic_feedback(detect_item_direction.pop(0), loop))
+
+async def run_haptic_feedback(direction: int):
+    print("running haptic feedback")
+    while True:
+        # Use await asyncio.wait_for(queue.get(), timeout=1.0) if you want a timeout for getting data.
+        print(f"{direction}: haptic handler received!")
+        await asyncio.sleep(1)
+    
+    # print('Start feedback')
+    # while True:
+    #     if detect_item_direction:
+    #         position = detect_item_direction.pop(0)
+    #         print('Move: position', position, ' the queue is: ', len(detect_item_direction), ' directions ')
+    #     #time.sleep(1)
+
+def _start_async():
+    loop = asyncio.new_event_loop()
+    t = threading.Thread(target=loop.run_forever)
+    t.daemon = True
+    t.start()
+    return loop
+    
+_loop = _start_async()
+
+def main():
 
     os.system('bluetoothctl -- remove C0:CC:BB:AA:AA:AA')
     device_ble_mac = os.getenv('DEVICE_BLE_MAC')
     os.system('sudo rm "/var/lib/bluetooth/{}/cache/C0:CC:BB:AA:AA:AA"'.format(device_ble_mac))
 
-    producer = asyncio.create_task(run_ble_producer(queue_haptic))
-    consumer = asyncio.create_task(run_haptic_feedback(queue_haptic))
-    
-    await asyncio.gather(producer)
+    threading.Thread(target=videostream.update,args=()).start()
+    send_feedback(_loop)
+    # Thread(target= send_feedback ,args=()).start()
+    run_ble_consumer()
    
-asyncio.run(main())
+main()
