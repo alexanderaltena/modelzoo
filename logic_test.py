@@ -1,5 +1,4 @@
 # Import packages
-import asyncio
 import os
 import argparse
 import cv2
@@ -8,6 +7,14 @@ import sys
 import time
 from threading import Thread
 import importlib.util
+
+# BLE Client
+# sys.path.insert(0, '../ble_client/')
+from ble_client.STLB100_GATT_client import run_ble_client, run_haptic_feedback
+import sys
+import datetime
+import platform
+import asyncio
 
 # Define VideoStream class to handle streaming of video from webcam in separate processing thread
 # Source - Adrian Rosebrock, PyImageSearch: https://www.pyimagesearch.com/2015/12/28/increasing-raspberry-pi-fps-with-python-and-opencv/
@@ -23,11 +30,11 @@ class VideoStream:
         # Read first frame from the stream
         (self.grabbed, self.frame) = self.stream.read()
 
-	    # Variable to control when the camera is stopped
+	# Variable to control when the camera is stopped
         self.stopped = False
 
     def start(self):
-	    # Start the thread that reads frames from the video stream
+	# Start the thread that reads frames from the video stream
         Thread(target=self.update,args=()).start()
         return self
 
@@ -51,34 +58,6 @@ class VideoStream:
 	# Indicate that the camera and thread should be stopped
         self.stopped = True
 
-class BleConsumer:
-    def __init__(self):
-         os.system('bluetoothctl -- remove C0:CC:BB:AA:AA:AA')
-         device_ble_mac = os.getenv('DEVICE_BLE_MAC')
-         os.system('sudo rm "/var/lib/bluetooth/{}/cache/C0:CC:BB:AA:AA:AA"'.format(device_ble_mac))
-         self.que_haptic =  asyncio.Queue().maxsize(1)
-    
-    def run_haptic_feedback(self):
-         while True:
-            # Use await asyncio.wait_for(queue.get(), timeout=1.0) if you want a timeout for getting data.
-            data = self.queue_haptic.get()
-            print(f"{data}: haptic handler received!")
-            #if data is None:
-            #    print("Logic disconnecting! Exiting consumer loop...")
-            #    break
-            #else:
-                # disconnect distance streaming
-                #await global_client.write_gatt_char(DISTANCE_CHAR_UUID, 0, response=True)
-                #await asyncio.sleep(1.0) 
-                #await global_client.write_gatt_char(HAPTIC_CHAR_UUID, b'\x01', response=True)
-                #await asyncio.sleep(1.0)
-                # re-start distance streaming
-                #await global_client.write_gatt_char(DISTANCE_CHAR_UUID, 4, resp
-         
-    def put(self, feedback: int):
-        self.queue_haptic.put(feedback)
-       
-        
 # Define and parse input arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('--modeldir', help='Folder the .tflite file is located in',
@@ -169,124 +148,150 @@ detect_item_name = "bottle"
 
 detect_item_position = []
 
-# Initialize frame rate calculation
-frame_rate_calc = 1
 freq = cv2.getTickFrequency()
-
-bleconsumer = BleConsumer()
-bleconsumer.run_haptic_feedback()
-
 
 # Initialize video stream
 videostream = VideoStream(resolution=(imW,imH),framerate=30).start()
 time.sleep(1)
 
+queue_haptic = asyncio.Queue()
+
 # Create window
 cv2.namedWindow('Object detector', cv2.WINDOW_NORMAL)
+    
+async def run_ble_producer(queue_haptic: asyncio.Queue):
+    print("setup ble consumer")
+    #for frame1 in camera.capture_continuous(rawCapture, format="bgr",use_video_port=True):
+    while True:
+        # Use await asyncio.wait_for(queue.get(), timeout=1.0) if you want a timeout for getting data.
+#         epoch, data = await queue_dist.get()
+#         if data is None:
+#             print("BLE disconnecting! Exiting consumer loop...")
+#             break
+#         else:
+#             timestamp = datetime.datetime.fromtimestamp(epoch/1000.)
+#             print(f"{data}")
 
-#for frame1 in camera.capture_continuous(rawCapture, format="bgr",use_video_port=True):
-while True:
+        # Initialize frame rate calculation
+        frame_rate_calc = 1
+        
+        # Start timer (for calculating frame rate)
+        t1 = cv2.getTickCount()
 
-    # Start timer (for calculating frame rate)
-    t1 = cv2.getTickCount()
+        # Grab frame from video stream
+        frame1 = videostream.read()
 
-    # Grab frame from video stream
-    frame1 = videostream.read()
+        # Acquire frame and resize to expected shape [1xHxWx3]
+        frame = frame1.copy()
+        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        frame_resized = cv2.resize(frame_rgb, (width, height))
+        input_data = np.expand_dims(frame_resized, axis=0)
 
-    # Acquire frame and resize to expected shape [1xHxWx3]
-    frame = frame1.copy()
-    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    frame_resized = cv2.resize(frame_rgb, (width, height))
-    input_data = np.expand_dims(frame_resized, axis=0)
+        # Normalize pixel values if using a floating model (i.e. if model is non-quantized)
+        if floating_model:
+            input_data = (np.float32(input_data) - input_mean) / input_std
 
-    # Normalize pixel values if using a floating model (i.e. if model is non-quantized)
-    if floating_model:
-        input_data = (np.float32(input_data) - input_mean) / input_std
+        # Perform the actual detection by running the model with the image as input
+        interpreter.set_tensor(input_details[0]['index'],input_data)
+        interpreter.invoke()
 
-    # Perform the actual detection by running the model with the image as input
-    interpreter.set_tensor(input_details[0]['index'],input_data)
-    interpreter.invoke()
+        # Retrieve detection results
+        boxes = interpreter.get_tensor(output_details[0]['index'])[0] # Bounding box coordinates of detected objects
+        classes = interpreter.get_tensor(output_details[1]['index'])[0] # Class index of detected objects
+        scores = interpreter.get_tensor(output_details[2]['index'])[0] # Confidence of detected objects
+        #num = interpreter.get_tensor(output_details[3]['index'])[0]  # Total number of detected objects (inaccurate and not needed)
 
-    # Retrieve detection results
-    boxes = interpreter.get_tensor(output_details[0]['index'])[0] # Bounding box coordinates of detected objects
-    classes = interpreter.get_tensor(output_details[1]['index'])[0] # Class index of detected objects
-    scores = interpreter.get_tensor(output_details[2]['index'])[0] # Confidence of detected objects
-    #num = interpreter.get_tensor(output_details[3]['index'])[0]  # Total number of detected objects (inaccurate and not needed)
+        # Loop over all detections and draw detection box if confidence is above minimum threshold
+        for i in range(len(scores)):
+            if ((scores[i] > min_conf_threshold) and (scores[i] <= 1.0) and (labels[int(classes[i])] == detector_item_name or labels[int(classes[i])] == detect_item_name )):
 
-    # Loop over all detections and draw detection box if confidence is above minimum threshold
-    for i in range(len(scores)):
-        if ((scores[i] > min_conf_threshold) and (scores[i] <= 1.0) and (labels[int(classes[i])] == detector_item_name or labels[int(classes[i])] == detect_item_name )):
-
-            # Get bounding box coordinates and draw box
-            # Interpreter can return coordinates that are outside of image dimensions, need to force them to be within image using max() and min()
-            ymin = int(max(1,(boxes[i][0] * imH)))
-            xmin = int(max(1,(boxes[i][1] * imW)))
-            ymax = int(min(imH,(boxes[i][2] * imH)))
-            xmax = int(min(imW,(boxes[i][3] * imW)))
-            
-            cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), (10, 255, 0), 2)
-            
-            # Draw label
-            object_name = labels[int(classes[i])] # Look up object name from "labels" array using class index
-            label = '%s: %d%%' % (object_name, int(scores[i]*100)) # Example: 'person: 72%'?
-            labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) # Get font size
-            label_ymin = max(ymin, labelSize[1] + 10) # Make sure not to draw label too close to top of window
-            cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Draw white box to put label text in
-            cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # Draw label text
-
-            # Draw circle in center
-            xcenter = xmin + (int(round((xmax - xmin) / 2)))
-            ycenter = ymin + (int(round((ymax - ymin) / 2)))
-            cv2.circle(frame, (xcenter, ycenter), 5, (0,0,255), thickness=-1)
-            
-            # Cache the item position to send out events where to move
-            if (object_name == detect_item_name):
-                # Cache the item 
-                detect_item_position.insert(0, xmin)
-                detect_item_position.insert(1, xmax)
-                detect_item_position.insert(2, ymin)
-                detect_item_position.insert(3, ymax)
-            # Guide the "item" to the correct position    
-            elif (object_name == detector_item_name and detect_item_position):
+                # Get bounding box coordinates and draw box
+                # Interpreter can return coordinates that are outside of image dimensions, need to force them to be within image using max() and min()
+                ymin = int(max(1,(boxes[i][0] * imH)))
+                xmin = int(max(1,(boxes[i][1] * imW)))
+                ymax = int(min(imH,(boxes[i][2] * imH)))
+                xmax = int(min(imW,(boxes[i][3] * imW)))
                 
-                # Go Forward 
-                if (xmin < detect_item_position[0] and xmax > detect_item_position[1] and ymin < detect_item_position[2] and ymax > detect_item_position[3]):
-                    print('Go Forward')
-                    bleconsumer.put(0)
-                # Go Right
-                elif (xcenter < detect_item_position[0]):
-                    print('Go Right')
-                    bleconsumer.put(4)
-                 # Go Left
-                elif (xcenter > detect_item_position[1]):
-                    print('Go Left')
-                    bleconsumer.put(2)
-                # Go Up     
-                elif (ycenter < detect_item_position[2]):
-                    print('Go down')
-                    bleconsumer.put(3)
-                # Go Down  
-                elif (ycenter > detect_item_position[3]):
-                    print('Go up')
-                    bleconsumer.put(5)
-            # Print info
-            # print('Object ' + str(i) + ': ' + object_name + ' at (' + str(xcenter) + ', ' + str(ycenter) + ')')
+                cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), (10, 255, 0), 2)
+                
+                # Draw label
+                object_name = labels[int(classes[i])] # Look up object name from "labels" array using class index
+                label = '%s: %d%%' % (object_name, int(scores[i]*100)) # Example: 'person: 72%'?
+                labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) # Get font size
+                label_ymin = max(ymin, labelSize[1] + 10) # Make sure not to draw label too close to top of window
+                cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) # Draw white box to put label text in
+                cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # Draw label text
 
-    # Draw framerate in corner of frame
-    cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(30,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2,cv2.LINE_AA)
+                # Draw circle in center
+                xcenter = xmin + (int(round((xmax - xmin) / 2)))
+                ycenter = ymin + (int(round((ymax - ymin) / 2)))
+                cv2.circle(frame, (xcenter, ycenter), 5, (0,0,255), thickness=-1)
+                
+                # Cache the item position to send out events where to move
+                if (object_name == detect_item_name):
+                    # Cache the item 
+                    detect_item_position.insert(0, xmin)
+                    detect_item_position.insert(1, xmax)
+                    detect_item_position.insert(2, ymin)
+                    detect_item_position.insert(3, ymax)
+                # Guide the "item" to the correct position    
+                elif (object_name == detector_item_name and detect_item_position):
+                    
+                    
+                    # Go Forward 
+                    if (xmin < detect_item_position[0] and xmax > detect_item_position[1] and ymin < detect_item_position[2] and ymax > detect_item_position[3]):
+                        print('Go Forward')
+                        await queue_haptic.put(0)
+                    # Go Right
+                    elif (xcenter < detect_item_position[0]):
+                        print('Go Right')
+                        await queue_haptic.put(4)
+                     # Go Left
+                    elif (xcenter > detect_item_position[1]):
+                        print('Go Left')
+                        await queue_haptic.put(2)
+                    # Go Up     
+                    elif (ycenter < detect_item_position[2]):
+                        print('Go down')
+                        await queue_haptic.put(3)
+                    # Go Down  
+                    elif (ycenter > detect_item_position[3]):
+                        print('Go up')
+                        await queue_haptic.put(5)
+#                     
+#                     data = await queue_haptic.get()
+#                     print(f"{data}: haptic handler received!")
+                # Print info
+                # print('Object ' + str(i) + ': ' + object_name + ' at (' + str(xcenter) + ', ' + str(ycenter) + ')')
 
-    # All the results have been drawn on the frame, so it's time to display it.
-    cv2.imshow('Object detector', frame)
+        # Draw framerate in corner of frame
+        cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(30,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2,cv2.LINE_AA)
 
-    # Calculate framerate
-    t2 = cv2.getTickCount()
-    time1 = (t2-t1)/freq
-    frame_rate_calc= 1/time1
+        # All the results have been drawn on the frame, so it's time to display it.
+        cv2.imshow('Object detector', frame)
 
-    # Press 'q' to quit
-    if cv2.waitKey(1) == ord('q'):
-        break
+        # Calculate framerate
+        t2 = cv2.getTickCount()
+        time1 = (t2-t1)/freq
+        frame_rate_calc= 1/time1
 
-# Clean up
-cv2.destroyAllWindows()
-videostream.stop()
+        # Press 'q' to quit
+        if cv2.waitKey(1) == ord('q'):
+            break
+
+    # Clean up
+    cv2.destroyAllWindows()
+    videostream.stop()
+        
+async def main():
+
+    os.system('bluetoothctl -- remove C0:CC:BB:AA:AA:AA')
+    device_ble_mac = os.getenv('DEVICE_BLE_MAC')
+    os.system('sudo rm "/var/lib/bluetooth/{}/cache/C0:CC:BB:AA:AA:AA"'.format(device_ble_mac))
+
+    producer = asyncio.create_task(run_ble_producer(queue_haptic))
+    consumer = asyncio.create_task(run_haptic_feedback(queue_haptic))
+    
+    await asyncio.gather(producer)
+   
+asyncio.run(main())
